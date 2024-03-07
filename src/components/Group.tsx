@@ -28,7 +28,9 @@ const Group = ({
           className="cursor-pointer text-blue-500 hover:text-blue-700 transition"
           onClick={() => setIsHidden(!isHidden)}
         >
-          Друзья, которые подписаны
+          {friends.length === 1
+            ? 'Подписан 1 друг'
+            : `Подписано ${friends.length} друзей`}
         </div>
       )}
       {isHidden &&
